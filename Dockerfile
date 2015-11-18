@@ -11,6 +11,7 @@ RUN apt-get update > /dev/null
 # install the daemon
 RUN apt-get -y install cphalo
 
+#this is the lynx install
 RUN apt-get update && apt-get install -y \
 	lynx \
 	--no-install-recommends \
@@ -23,5 +24,5 @@ WORKDIR /root
 ADD halo.sh /root/halo.sh
 #create entrypoint which should run every time this image is used
 ENTRYPOINT ["./halo.sh"]
-#command to run main application that will hopefully be tracked as main PID
+#command to run lynx which will hopefully be tracked as main PID
 CMD ["lynx"]
