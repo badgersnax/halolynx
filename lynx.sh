@@ -1,3 +1,3 @@
 #!/bin/bash
-halo.sh
+/root/halo.sh
 exec lynx
