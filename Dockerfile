@@ -24,6 +24,6 @@ WORKDIR /root
 ADD halo.sh /root/halo.sh
 ADD lynx.sh /root/lynx/sh
 #create entrypoint which should run every time this image is used
-ENTRYPOINT ["lynx.sh"]
+#ENTRYPOINT ["lynx.sh"]
 #command to run lynx which will hopefully be tracked as main PID
 #CMD ["./halo.sh"]
