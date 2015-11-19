@@ -22,7 +22,8 @@ WORKDIR /root
 #introduce environment variables
 #add script to run with entrypoint into the working directory
 ADD halo.sh /root/halo.sh
+ADD lynx.sh /root/lynx/sh
 #create entrypoint which should run every time this image is used
-ENTRYPOINT ["lynx"]
+ENTRYPOINT ["lynx.sh"]
 #command to run lynx which will hopefully be tracked as main PID
-CMD ["./halo.sh"]
+#CMD ["./halo.sh"]
