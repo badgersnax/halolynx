@@ -11,6 +11,9 @@ RUN apt-get update > /dev/null
 # install the daemon
 RUN apt-get -y install cphalo
 
+#install gosu
+RUN curl -o /usr/local/bin/gosu -sSL "https://github.com/tianon/gosu/releases/download/1.2/gosu-$(dpkg --print-architecture)" && chmod +x /usr/local/bin/gosu
+
 #this is the lynx install
 RUN apt-get update && apt-get install -y \
 	lynx \
