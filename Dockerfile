@@ -25,6 +25,6 @@ ADD halo.sh /root/halo.sh
 #add the lynx script that will run halo registration as well as start lynx
 ADD lynx.sh /root/lynx.sh
 #create entrypoint which should run every time this image is used
-ENTRYPOINT [ /root/lynx.sh ]
+ENTRYPOINT ["/root/lynx.sh"]
 #command to run lynx which will hopefully be tracked as main PID
 #CMD ["./halo.sh"]
