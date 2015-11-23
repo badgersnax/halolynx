@@ -20,8 +20,9 @@ RUN apt-get update && apt-get install -y \
 #change working directory
 WORKDIR /root
 #introduce environment variables
-#add script to run with entrypoint into the working directory
+#add halo registry script to run to run in the lynx script
 ADD halo.sh /root/halo.sh
+#add the lynx script that will run halo registration as well as start lynx
 ADD lynx.sh /root/lynx.sh
 #create entrypoint which should run every time this image is used
 ENTRYPOINT [ /root/lynx.sh ]
