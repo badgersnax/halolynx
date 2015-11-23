@@ -1,3 +1,3 @@
 #!/bin/bash
 /root/halo.sh
-exec gosu /usr/bin/lynx
+exec gosu root /usr/bin/lynx
